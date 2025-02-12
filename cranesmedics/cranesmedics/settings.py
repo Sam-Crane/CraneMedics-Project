@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'channels',
+    'admin_panel',
+    'patient_panel',
+    'doctor_panel',
+
 ]
 
 MIDDLEWARE = [
@@ -69,7 +75,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cranesmedics.wsgi.application'
+# WSGI_APPLICATION = 'cranesmedics.wsgi.application'
+
+ASGI_APPLICATION = 'cranesmedics.asgi.application'
 
 
 # Database
