@@ -89,8 +89,9 @@ DATABASES = {
         'NAME': 'cranesmedics_db',  # Database name
         'CLIENT': {
             'host': 'mongodb://localhost:27017',
-            'username': '',
-            'password': '',
+            'username': 'admin',
+            'password': 'securepass123',
+            'authSource': 'admin',
         },
         'OPTIONS': {},
     }
@@ -137,6 +138,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Custom user model
+AUTH_USER_MODEL = 'admin_panel.CustomUser'
 
 
 #Allowing the custom authentication backend

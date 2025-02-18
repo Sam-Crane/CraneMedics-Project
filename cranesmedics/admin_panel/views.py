@@ -1,3 +1,7 @@
-from django.shortcuts import render
+# views.py
+from django.contrib.admin.views.decorators import staff_member_required
 
-# Create your views here.
+@staff_member_required
+def admin_dashboard(request):
+    # IT Admin-specific logic
+    pass

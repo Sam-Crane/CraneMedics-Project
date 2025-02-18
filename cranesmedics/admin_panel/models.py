@@ -3,10 +3,12 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     ROLES = (
-        ('ADMIN', 'Administrator'),
-        ('DOCTOR', 'Doctor'),
-        ('PATIENT', 'Patient'),
+        ('IT', 'Administrator'),
+        ('DR', 'Doctor'),
+        ('PT', 'Patient'),
     )
     
-    role = models.CharField(max_length=10, choices=ROLES, default='PATIENT')
+    role = models.CharField(max_length=2, choices=ROLES)
+    phone = models.CharField(max_length=20)
+    is_verified = models.BooleanField(default=False)
     # Additional fields as needed
