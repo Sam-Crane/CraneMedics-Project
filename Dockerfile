@@ -24,9 +24,7 @@ EXPOSE 8000
 # Install Redis
 RUN apt-get update && apt-get install -y redis-server
 
-# Create non-root user and set permissions
-RUN useradd -U -u 1000 appuser && \
-    chown -R 1000:1000 /app
+
 USER 1000
 
 # Run the application
